@@ -101,7 +101,7 @@ const HeroSection = ({
               <Globe className="w-16 h-16 text-white" />
             </motion.div>
 
-            {/* Orbiting elements */}
+            {/* Orbiting elements - Enhanced with more modern animations */}
             <motion.div
               animate={{
                 rotate: [0, 360],
@@ -109,10 +109,33 @@ const HeroSection = ({
               transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
               className="absolute w-[300px] h-[300px] rounded-full border border-dashed border-blue-300/30"
             >
-              <motion.div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center shadow-lg">
+              <motion.div
+                className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-2xl"
+                whileHover={{ scale: 1.2, rotate: 15 }}
+                animate={{
+                  boxShadow: [
+                    "0 10px 30px rgba(59, 130, 246, 0.3)",
+                    "0 15px 40px rgba(59, 130, 246, 0.5)",
+                    "0 10px 30px rgba(59, 130, 246, 0.3)",
+                  ],
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
                 <Code className="w-8 h-8 text-white" />
               </motion.div>
-              <motion.div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center shadow-lg">
+              <motion.div
+                className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center shadow-xl"
+                whileHover={{ scale: 1.3 }}
+                animate={{
+                  y: [-5, 5, -5],
+                  boxShadow: [
+                    "0 8px 25px rgba(96, 165, 250, 0.4)",
+                    "0 12px 35px rgba(96, 165, 250, 0.6)",
+                    "0 8px 25px rgba(96, 165, 250, 0.4)",
+                  ],
+                }}
+                transition={{ duration: 3, repeat: Infinity }}
+              >
                 <Globe className="w-6 h-6 text-white" />
               </motion.div>
             </motion.div>
@@ -124,10 +147,33 @@ const HeroSection = ({
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               className="absolute w-[400px] h-[400px] rounded-full border border-dashed border-purple-300/30"
             >
-              <motion.div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-16 h-16 bg-purple-500 rounded-lg flex items-center justify-center shadow-lg">
+              <motion.div
+                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl"
+                whileHover={{ scale: 1.2, rotate: -15 }}
+                animate={{
+                  boxShadow: [
+                    "0 10px 30px rgba(147, 51, 234, 0.3)",
+                    "0 15px 40px rgba(147, 51, 234, 0.5)",
+                    "0 10px 30px rgba(147, 51, 234, 0.3)",
+                  ],
+                }}
+                transition={{ duration: 2.5, repeat: Infinity }}
+              >
                 <Database className="w-8 h-8 text-white" />
               </motion.div>
-              <motion.div className="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center shadow-lg">
+              <motion.div
+                className="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-500 rounded-full flex items-center justify-center shadow-xl"
+                whileHover={{ scale: 1.3 }}
+                animate={{
+                  x: [-5, 5, -5],
+                  boxShadow: [
+                    "0 8px 25px rgba(168, 85, 247, 0.4)",
+                    "0 12px 35px rgba(168, 85, 247, 0.6)",
+                    "0 8px 25px rgba(168, 85, 247, 0.4)",
+                  ],
+                }}
+                transition={{ duration: 3.5, repeat: Infinity }}
+              >
                 <Code className="w-6 h-6 text-white" />
               </motion.div>
             </motion.div>
@@ -139,11 +185,65 @@ const HeroSection = ({
               transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
               className="absolute w-[500px] h-[500px] rounded-full border border-dashed border-blue-200/20"
             >
-              <motion.div className="absolute top-1/4 right-1/4 transform translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center shadow-lg">
+              <motion.div
+                className="absolute top-1/4 right-1/4 transform translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center shadow-xl"
+                whileHover={{ scale: 1.4, rotate: 10 }}
+                animate={{
+                  scale: [1, 1.1, 1],
+                  boxShadow: [
+                    "0 6px 20px rgba(59, 130, 246, 0.3)",
+                    "0 10px 30px rgba(147, 51, 234, 0.4)",
+                    "0 6px 20px rgba(59, 130, 246, 0.3)",
+                  ],
+                }}
+                transition={{ duration: 4, repeat: Infinity }}
+              >
                 <Database className="w-5 h-5 text-white" />
               </motion.div>
-              <motion.div className="absolute bottom-1/4 left-1/4 transform -translate-x-1/2 translate-y-1/2 w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center shadow-lg">
+              <motion.div
+                className="absolute bottom-1/4 left-1/4 transform -translate-x-1/2 translate-y-1/2 w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center shadow-xl"
+                whileHover={{ scale: 1.4, rotate: -10 }}
+                animate={{
+                  scale: [1, 1.1, 1],
+                  boxShadow: [
+                    "0 6px 20px rgba(147, 51, 234, 0.3)",
+                    "0 10px 30px rgba(59, 130, 246, 0.4)",
+                    "0 6px 20px rgba(147, 51, 234, 0.3)",
+                  ],
+                }}
+                transition={{ duration: 4.5, repeat: Infinity, delay: 1 }}
+              >
                 <Globe className="w-5 h-5 text-white" />
+              </motion.div>
+            </motion.div>
+
+            {/* Additional outer orbit for more visual complexity */}
+            <motion.div
+              animate={{
+                rotate: [0, -360],
+              }}
+              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+              className="absolute w-[600px] h-[600px] rounded-full border border-dashed border-blue-100/10"
+            >
+              <motion.div
+                className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-gradient-to-br from-blue-300 to-blue-400 rounded-full flex items-center justify-center shadow-lg"
+                animate={{
+                  scale: [0.8, 1.2, 0.8],
+                  opacity: [0.6, 1, 0.6],
+                }}
+                transition={{ duration: 3, repeat: Infinity }}
+              >
+                <div className="w-2 h-2 bg-white rounded-full"></div>
+              </motion.div>
+              <motion.div
+                className="absolute bottom-0 right-1/2 transform translate-x-1/2 translate-y-1/2 w-6 h-6 bg-gradient-to-br from-purple-300 to-purple-400 rounded-full flex items-center justify-center shadow-lg"
+                animate={{
+                  scale: [0.9, 1.3, 0.9],
+                  opacity: [0.5, 0.9, 0.5],
+                }}
+                transition={{ duration: 3.5, repeat: Infinity, delay: 0.5 }}
+              >
+                <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
               </motion.div>
             </motion.div>
           </div>
